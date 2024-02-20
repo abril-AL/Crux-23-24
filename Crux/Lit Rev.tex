@@ -1,0 +1,159 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[margin=1.2in]{geometry}
+
+\usepackage{blindtext}
+\usepackage[super]{nth}
+\usepackage{ulem}
+\usepackage{xcolor, soul}
+\sethlcolor{yellow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+
+
+\newcommand*{\Rn}{$\mathbb{R}^n$}
+\newcommand*{\x}{$\Vec{x}$}
+\newcommand*{\y}{$\Vec{y}$}
+\newcommand*{\vc}{$\Vec{vc}$}
+
+
+
+\title{Crux 2023-20 24}
+\author{Literature Review}
+\date{02/17/24}
+
+\begin{document}
+\maketitle
+
+
+\subsection*{Introduction}
+
+This Literature Review is focused on identifying what EEG channels to use for our project. The focus in on measuring concentration through measuring beta power and averages.
+
+\subsection*{Source 1 - Analysis of EEG Signals for the Estimation of Concentration Level of Humans}
+
+\begin{itemize}
+    \item Introduction
+          \begin{itemize}
+              \item Characteristics extracted from raw EEG using FFT, mean, standard deviation, median and mean root square. Concentration level determined by comparing extracted features.
+              \item Prefrontal lobe responsible for attention and concentration, judgement and motor skills.
+              \item Dominant high frequencies indicate ppl are alert.
+              \item Intensities(Hz) split into bands
+              \item Beta Waves - 14-30 Hz, awake, alert and perceptive state
+          \end{itemize}
+    \item Methods
+          \begin{itemize}
+              \item EEG 10-20 amplification method
+              \item 3 electrodes (not given??)
+              \item notch filter
+              \item participants aged 20-23
+              \item task of reading a book, puzzle, counting in reverse for 10 minutes
+          \end{itemize}
+    \item Feature Extraction
+          \begin{itemize}
+              \item FFT, average, SD, determination of variance
+              \item raw signal $=>$ frequency domain using FFT
+              \item signal classified among the 5 brain waves
+              \item Max mean, RMS, SD, and Var observed in first 2 mnutes, and min in last 2 minutes
+          \end{itemize}
+    \item Results and Discussion
+          \begin{itemize}
+              \item FFT is effective for feature extraction
+          \end{itemize}
+\end{itemize}
+
+Overall this paper was okay, i dont think its a very reliable source, but it at least offered some simple methods for feature extraction.
+
+\subsection*{Source 2 - Measurement of Concentration Duration on Reading Activity: EEG Analysis with OpenBCI Ganglion Board}
+
+\begin{itemize}
+    \item Abstract
+          \begin{itemize}
+              \item Someone who is concentrating will be at a frequency of 15-18Hz
+              \item Reading requires concentration
+              \item concentration power while reading is indicated through the duration of concentration
+              \item 15 minute recordings usign OpenBCI
+              \item sampling rate of 200Hz, max impedance of 15 ohms
+              \item Processed with EEGLab and EDGF Browser
+              \item 3 classes for results: low, non, and high concentration
+          \end{itemize}
+    \item Introduction
+          \begin{itemize}
+              \item concentration is at a frequency of 15-18Hz which is in the beta range
+              \item concentration power can be described based on the duration of concentration
+          \end{itemize}
+    \item Methods
+          \begin{itemize}
+              \item two main theories are used: neurolinguistic theory and brain wave theory
+          \end{itemize}
+    \item Findings
+          \begin{itemize}
+              \item EEG with the brain wave range at 13-40Hz (Beta Rhythm) is characterized as the optimal concentration condition, especially at 15-18 Hz.
+              \item If it is above 22 Hz even up to 40 Hz (Gamma Rhythms), EEG data is characterized as high concentration (focus), but can have anxiety / anxiety impact.
+              \item Meanwhile, if under 13 Hz it shows diminished concentration and towards a relaxed state and toward a reduction of awareness conditions
+              \item average concentration in 15 was 11 minutes 3 seconds: optimal con. 3m19s, low con. 6m9s
+          \end{itemize}
+\end{itemize}
+
+This paper is much clearer, still not a great academic source, but at least offers more on how to classify concentration.
+
+\subsection*{Influence of Binaural Beats on EEG Signal}
+
+\begin{itemize}
+    \item Abstract
+          \begin{itemize}
+              \item requency of
+                    f = 10 Hz. The left ear was exposed to a signal with a frequency of 100 Hz, and the right ear — to a signal with a frequency of 110 Hz, the acoustic pressure level SPL = 73 dB
+              \item ecrease of average amplitudes of spectral density function of EEG strength signal for alpha and beta frequency ranges
+              \item amplitude of spectral density function of the strength has increased in theta frequency range
+          \end{itemize}
+    \item Introduction
+          \begin{itemize}
+              \item Binaural beats are a result of superposition of neuron discharge coming from the left and right ear on a suitable level of the hearing route
+              \item Two signals are connected in the brain, the result being
+                    a sensation of hearing a third signal — with a frequency of a signal provided to the left and the right earcalled binaural beats
+              \item reticular system decides about lucidity, concentration and consciousness, changes the brain wave activity so that it is adjusted to the stimulation of the beat signals
+              \item maintain homeostasis
+              \item subjects listened through stereo headphones to pure tones designed to produce delta and theta binaural beats
+              \item analysis of the EEG data involved computing the changes in the percentages of total EEG amplitudes, comparing the conditions of waking rest, binaural-beat stimulus periods,and a second period of rest
+              \item ubjects generated significantly less alpha and beta, and more delta and theta freq. brainwaves
+              \item binaural beats may be associated with
+                    reduced EEG arousal
+              \item other research observed reductions in the percentages of occipital alpha (bipolar O1-O2) were signiﬁcant
+              \item reductions in the percentages of central delta(bipolar C3-C4) were similarly signiﬁcant
+          \end{itemize}
+    \item Methods
+          \begin{itemize}
+              \item binaural beats with an acoustic pressure level of SPL = 73 dB,
+              \item frequencies: the right ear — 110 Hz,left ear - 100 Hz
+              \item total duration of the experiment was 35 min, 20 with stimulus
+              \item played on stereo headphones
+              \item EEG cap was fitted in accordance with a standard 10/20 system
+              \item electrodes are placed along sagittal line of the head \textbf{(5 on the left side: Fp1, F3, C3, P3, O1 and 5 on the right side: Fp2, F4, C4, P4, O2 and a reference electrode on the OP, Pz)}
+              \item The initial 5 min was without the binaural beats exposition, 20 min with the signal exposition and 10 min without the exposition.
+          \end{itemize}
+    \item Results
+          \begin{itemize}
+              \item analysis of a spectral density function of EEG strength signal
+              \item occurred a component in EEG signal morphology, with a frequency of the presented binaural beats
+              \item assumed an EEG signal frequency division used in the electro encephalography: beta — from 12.0 to 29.9 Hz, alpha — from 8.0 to 11.9 Hz, theta — from 4.0 to 7.9 Hz, delta — from 0.5 to 3.9 Hz
+          \end{itemize}
+    \item Conclusion
+          \begin{itemize}
+              \item
+          \end{itemize}
+\end{itemize}
+
+This paper was much nicer, methods were much clearer and thought out. This study was focused on the effect overall on EEG rather than on just concentration, however, they did go over the effect on beta waves, which is of interest. Since binaural beats seem to decrease beta power, we may see less strong indicators of concentration in out study.
+
+
+
+\end{document}
